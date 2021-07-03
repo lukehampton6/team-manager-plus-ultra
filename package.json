@@ -1,0 +1,27 @@
+{
+  "name": "team-manager-plus-ultra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukehampton6/team-manager-plus-ultra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukehampton6/team-manager-plus-ultra/issues"
+  },
+  "homepage": "https://github.com/lukehampton6/team-manager-plus-ultra#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^8.1.1",
+    "jest": "^27.0.6"
+  }
+}

@@ -6,7 +6,6 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const fs = require("fs");
-var flag = 0
 
 
 const managerPrompt = () => {
@@ -79,9 +78,6 @@ const managerPrompt = () => {
 
 
 const employeePrompt = async () => {
-    if (flag === 1) {
-        return
-    }
   return await inquirer
     .prompt([
       {
@@ -198,4 +194,18 @@ const employeePrompt = async () => {
 
 managerPrompt()
   .then(employeePrompt)
+  .then((data) => {
+    const createPage = generatePage(data)
+    return createPage;
+  })
+  .then((data) => {
+    fs.writeFile('./dist/index.html', data, err => {
+      if(err) {
+        console.log(err);
+        return;
+      } else {
+        console.log('Page has been generated! Look at index.html for results.');
+      }
+    })
+  })
 
